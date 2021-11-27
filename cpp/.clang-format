@@ -8,3 +8,4 @@ ReferenceAlignment: Left
 PointerAlignment: Left
 FixNamespaceComments: False
 SpaceBeforeCpp11BracedList: True
+AlignConsecutiveAssignments: Consecutive

@@ -1,14 +1,10 @@
-import Imports from "./WASMImports";
-import Exports from "./WASMExports";
-
-let exports: Exports;
+import * as WASM from './WASM';
+import * as GL from './GL';
 
 async function main() {
-  const wasm = await WebAssembly.instantiateStreaming(fetch("meta.wasm"), Imports);
-  exports = wasm.instance.exports;
-
-  exports.main();
+  await WASM.init();
+  await GL.init();
+  await GL.mainLoop();
 }
-
 
 main();

@@ -4,7 +4,8 @@ project(metagame)
 
 add_executable(meta 
   src/Allocator.cpp
-  src/main.cpp
+  src/Renderer.cpp
+  src/Init.cpp
 )
 
 

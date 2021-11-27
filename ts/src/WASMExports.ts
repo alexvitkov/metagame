@@ -1,5 +1,7 @@
 interface Exports {
-  main(): void;
+  init(): void;
+  renderFrame(): void;
+  memory: WebAssembly.Memory;
 }
 
 export default Exports;

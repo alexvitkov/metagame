@@ -1,5 +1,8 @@
 #pragma once
 
+#define EXPORT(name) [[clang::export_name(name)]] extern "C"
+#define IMPORT(name) [[clang::import_name(name)]] extern "C"
+
 #include <stdint.h>
 typedef uint8_t u8;
 typedef uint16_t u16;
