@@ -1,0 +1,18 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc-watch --onSuccess \"npm run bundle\"",
+    "bundle": "esbuild --bundle --target=es2017 outjs/main.js --outfile=../dist/bundle.js --sourcemap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.14.0",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.5.2"
+  }
+}

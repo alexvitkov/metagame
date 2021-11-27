@@ -1,0 +1,8 @@
+compile_commands.json
+build
+.cache
+outjs
+node_modules
+dist/*.js
+dist/*.js.map
+dist/*wasm
