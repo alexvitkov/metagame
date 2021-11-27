@@ -3,7 +3,7 @@ import { getU8Array, exports, Pointer } from "./WASM";
 import vertexShader from "../../shader/basic.vert.glsl";
 import fragmentShader from "../../shader/basic.frag.glsl";
 
-let gl: WebGL2RenderingContext;
+export let gl: WebGL2RenderingContext;
 let glBuffers = [];
 const canvas = document.getElementById("mainCanvas") as HTMLCanvasElement;
 
@@ -52,11 +52,14 @@ function createProgram(vert, frag) {
   return program;
 }
 
+export function registerBuffer(buf: WebGLBuffer) {
+  glBuffers.push(buf);
+  return glBuffers.length - 1;
+}
 
 function glCreateBuffer() {
   const buf = gl.createBuffer();
-  glBuffers.push(buf);
-  return glBuffers.length - 1;
+  return registerBuffer(buf);
 }
 
 function glBindBuffer(target, buffer) {
