@@ -1,4 +1,5 @@
 #include <Allocator.h>
+#include <Console.h>
 #include <Renderer.h>
 #include <JS.h>
 

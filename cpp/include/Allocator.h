@@ -16,6 +16,8 @@ struct Block {
 
   u32 size();
   void set_next(Block*);
+  bool is_free();
+  void remove();
 };
 
 inline u32 size(void* ptr) {
@@ -24,7 +26,8 @@ inline u32 size(void* ptr) {
 
 void init();
 void* alloc(u32 size);
-[[noreturn]] void out_of_memory();
+void free(void *ptr);
+[[noreturn]] void outOfMemory();
 
 } // namespace Allocator
 
