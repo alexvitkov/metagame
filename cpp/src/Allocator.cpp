@@ -1,5 +1,5 @@
 #include <Allocator.h>
-#include <Console.h>
+#include <Debug.h>
 
 u32 heap_size = 4 << 20;
 
@@ -65,7 +65,7 @@ void Block::set_next(Block* new_next) {
 }
 
 void outOfMemory() {
-  Console::alert("Out of memory");
+  Debug::alert("Out of memory");
   __builtin_unreachable();
 }
 

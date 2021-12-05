@@ -32,7 +32,7 @@ static void format_number(Ostream& o, T number, int radix) {
     ptr++;
   }
 
-  o.write({ (u8*)ptr, (u32)(ptr - buffer) });
+  o.write({ (u8*)ptr, (u32)(buffer + bufferSize - ptr) });
 }
 
 void format(Ostream& o, const char* str) {

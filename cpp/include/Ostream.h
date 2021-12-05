@@ -23,7 +23,7 @@ public:
 template <typename T>
 void format(class Ostream& o, const Slice<T>& slice) {
   o(slice.head, ", ", slice.size, "\n");
-  o("Slice {");
+  o("{ ");
   for (const T& el : slice)
     o(el, ", ");
   o("}");

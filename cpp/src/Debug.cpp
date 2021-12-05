@@ -1,6 +1,6 @@
-#include <Console.h>
+#include <Debug.h>
 
-namespace Console {
+namespace Debug {
 
 IMPORT("console_log_string") void console_log_string(const char* str);
 IMPORT("console_warn_string") void console_warn_string(const char* str);

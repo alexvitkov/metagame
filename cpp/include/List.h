@@ -1,5 +1,4 @@
 #include <Allocator.h>
-#include <Console.h>
 #include <Slice.h>
 
 template <typename T>
