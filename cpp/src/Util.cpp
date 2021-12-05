@@ -1,4 +1,3 @@
-#include "JS.h"
 #include <String.h>
 
 EXPORT("strlen") u32 strlen(const char* str) {

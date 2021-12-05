@@ -1,7 +1,6 @@
 #include <Allocator.h>
 #include <Console.h>
 #include <Renderer.h>
-#include <JS.h>
 
 EXPORT("init") void init() {
   Renderer::init();

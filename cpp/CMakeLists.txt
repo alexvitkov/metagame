@@ -6,6 +6,7 @@ add_executable(meta
   src/Allocator.cpp
   src/Console.cpp
   src/Init.cpp
+  src/Ostream.cpp
   src/Renderer.cpp
   src/Util.cpp
 )
