@@ -1,4 +1,5 @@
 #include <Ostream.h>
+#include <Slice.h>
 #include <Libc.h>
 
 template <typename T>

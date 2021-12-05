@@ -4,5 +4,6 @@ build
 outjs
 node_modules
 dist/*.js
-dist/*.js.map
-dist/*wasm
+dist/*.wasm
+dist/*.map
+dist/src

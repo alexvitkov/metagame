@@ -7,11 +7,13 @@ public:
   T* head;
   u32 size;
 
-  T* begin() {
+  T* begin() const {
     return head;
   }
 
-  T* end() {
+  T* end() const {
     return head + size;
   }
+
+  T& operator[](u32 index) { return head[index]; }
 };

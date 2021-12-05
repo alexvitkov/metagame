@@ -21,5 +21,7 @@ target_include_directories(meta PRIVATE ./include)
 add_custom_command(
   TARGET meta
   POST_BUILD
-  COMMAND cp meta ${CMAKE_CURRENT_SOURCE_DIR}/../dist/meta.wasm
+  COMMAND python ../wasm-sourcemap.py --dwarfdump /usr/bin/llvm-dwarfdump -w ${CMAKE_CURRENT_SOURCE_DIR}/../dist/meta.wasm --source-map-url meta.wasm.map -o ${CMAKE_CURRENT_SOURCE_DIR}/../dist/meta.wasm.map meta
+
 )
+

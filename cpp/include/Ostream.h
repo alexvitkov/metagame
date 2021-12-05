@@ -1,4 +1,5 @@
 #pragma once
+#include <lib.h>
 #include <Slice.h>
 
 class Ostream {
@@ -18,6 +19,15 @@ public:
   void operator()() {
   }
 };
+
+template <typename T>
+void format(class Ostream& o, const Slice<T>& slice) {
+  o(slice.head, ", ", slice.size, "\n");
+  o("Slice {");
+  for (const T& el : slice)
+    o(el, ", ");
+  o("}");
+}
 
 void format(Ostream& o, u8);
 void format(Ostream& o, u16);

@@ -5,7 +5,7 @@ export type Pointer = number;
 export let exports: Exports;
 
 export async function init() {
-  const wasm = await WebAssembly.instantiateStreaming(fetch("meta.wasm"), Imports);
+  const wasm = await WebAssembly.instantiateStreaming(fetch("/meta.wasm"), Imports);
   exports = wasm.instance.exports;
   exports.init();
 }
