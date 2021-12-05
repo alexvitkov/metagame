@@ -1,4 +1,5 @@
 import { wasmImports as wasmImportsGL } from "./GL";
+import { wasmImports as wasmImportsInspector } from "./Inspector";
 import { getCString, Pointer } from "./WASM";
 
 const wasmImportsCore = {
@@ -19,6 +20,7 @@ const wasmImports = {
   env: {
     ...wasmImportsCore,
     ...wasmImportsGL,
+    ...wasmImportsInspector,
   }
 };
 

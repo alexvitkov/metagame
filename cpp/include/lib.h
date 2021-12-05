@@ -2,6 +2,7 @@
 
 #define EXPORT(name) [[clang::export_name(name)]] extern "C"
 #define IMPORT(name) [[clang::import_name(name)]] extern "C"
+#define EXPORT_VAR __attribute__((__visibility__("default")))
 
 #include <stdint.h>
 typedef uint8_t u8;

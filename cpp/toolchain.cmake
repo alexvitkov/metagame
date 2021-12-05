@@ -1,6 +1,6 @@
 set(TARGET_TRIPLE wasm32-unknown-unknown)
-set(COMMON_FLAGS "-ffreestanding -nostdlib -fno-rtti -fno-exceptions")
-set(LD_FLAGS "--no-entry --initial-memory=5242880")
+set(COMMON_FLAGS "-ffreestanding -nostdlib -fno-rtti -fno-exceptions -fvisibility=hidden")
+set(LD_FLAGS "--no-entry --initial-memory=5242880 --export-dynamic --export=__wasm_call_ctors")
 set(LD "wasm-ld ${LD_FLAGS} <CMAKE_CXX_LINK_FLAGS> <LINK_FLAGS> <OBJECTS> -o <TARGET> <LINK_LIBRARIES>")
 
 set(CMAKE_C_COMPILER clang)
