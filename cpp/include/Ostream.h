@@ -29,3 +29,5 @@ void format(Ostream& o, i32);
 void format(Ostream& o, i64);
 void format(Ostream& o, void*);
 void format(Ostream& o, const char*);
+void format(Ostream& o, float);
+void format(Ostream& o, double);

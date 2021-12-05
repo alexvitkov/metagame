@@ -6,6 +6,12 @@ const wasmImportsCore = {
   console_log_string: (ptr: Pointer) => console.log(getCString(ptr)),
   console_warn_string: (ptr: Pointer) => console.warn(getCString(ptr)),
   console_error_string: (ptr: Pointer) => console.error(getCString(ptr)),
+
+  isnan: Number.isNaN,
+  isinf: num => !Number.isFinite(num),
+  log10: Math.log10,
+  pow: Math.pow,
+  floor: Math.floor
 };
 
 
